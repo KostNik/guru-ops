@@ -1,6 +1,8 @@
 package guru.springframework.bootstrap.profilesysout;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
@@ -8,10 +10,13 @@ import org.springframework.stereotype.Component;
 @Profile("default")
 public class DefaultProfileSysout {
 
-    public DefaultProfileSysout() {
+
+    @Autowired
+    public DefaultProfileSysout(@Value("${guru.springframework.profile.message}") String message) {
         System.out.println("###############################");
         System.out.println("###############################");
         System.out.println("##           DEFAULT         ##");
+        System.out.println(message);
         System.out.println("###############################");
         System.out.println("###############################");
     }
