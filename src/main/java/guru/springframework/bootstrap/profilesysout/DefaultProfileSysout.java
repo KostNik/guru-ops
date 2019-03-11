@@ -15,7 +15,7 @@ public class DefaultProfileSysout {
     public DefaultProfileSysout(@Value("${guru.springframework.profile.message}") String message) {
         System.out.println("###############################");
         System.out.println("###############################");
-        System.out.println("##           DEFAULT         ##");
+        System.out.println("##           DEFAULT          ##");
         System.out.println(message);
         System.out.println("###############################");
         System.out.println("###############################");
